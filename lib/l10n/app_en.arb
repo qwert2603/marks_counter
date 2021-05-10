@@ -1,0 +1,12 @@
+{
+    "appName": "Marks Counter",
+    "average": "Average: ",
+    "clear": "Clear",
+    "removeLast": "<-",
+    "settings": "Settings",
+    "markOne": "Mark \"One\"",
+    "ok": "OK",
+    "aboutTitle": "Thanks for using",
+    "aboutMessage": "This app does not contain any ad now and will never contain.\n\nIf You want to support developer, You can install my another app \"Good Job\" to form good habits.",
+    "textGoodJob": "Good Job app"
+}
