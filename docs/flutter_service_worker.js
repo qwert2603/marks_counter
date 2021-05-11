@@ -9,13 +9,13 @@ const RESOURCES = {
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/NOTICES": "fb5d571c22d9dd1699e327b0b20f82cd",
-"index.html": "a1e1b855fbbdbd6ec4b4944ec03f1a89",
-"/": "a1e1b855fbbdbd6ec4b4944ec03f1a89",
+"index.html": "af0a11909491c02c4cbe3f63bdb60c68",
+"/": "af0a11909491c02c4cbe3f63bdb60c68",
 "icons/Icon-192.png": "b264138faa18ce261a04ccf81b993c8b",
 "icons/Icon-512.png": "f7b78d46f140966cad3bac3f52fc94e3",
 "manifest.json": "0e1aeab4b4d0c9f7ff89f06cc4173cb2",
 "version.json": "5f7444b949e1a18b27f950de0d415987",
-"favicon.png": "500f03357de8e0c52e689ee267e9dc94",
+"favicon.png": "f7b78d46f140966cad3bac3f52fc94e3",
 "main.dart.js": "bfad126dddb274461e59001d4fac6004"
 };
 
