@@ -5,7 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   test("marks", () async {
-    SharedPreferences.setMockInitialValues({RepoImpl.KEY_MARKS: "12345"});
+    // test corrupted storage.
+    SharedPreferences.setMockInitialValues({RepoImpl.KEY_MARKS: "q1 23h45f"});
     final prefs = await SharedPreferences.getInstance();
     final repo = RepoImpl(prefs);
     final marksState = MarksState(repo);
