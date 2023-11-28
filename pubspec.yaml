@@ -14,11 +14,26 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  intl: 0.17.0
+  intl: 0.18.1
 
   cupertino_icons: 1.0.3
   provider: 5.0.0
-  shared_preferences: 2.0.5
+  shared_preferences: ^2.1.2
+
+  shared_preferences_aurora:
+    git:
+      url: https://gitlab.com/omprussia/flutter/flutter-plugins.git
+      ref: master
+      path: packages/shared_preferences/shared_preferences_aurora
+
+  device_info_plus: ^9.0.3
+  device_info_plus_aurora:
+    git:
+      url: https://gitlab.com/omprussia/flutter/flutter-plugins.git
+      ref: master
+      path: packages/device_info_plus/device_info_plus_aurora
+
+
   url_launcher: 6.0.3
 
 dev_dependencies:

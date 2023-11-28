@@ -1,3 +1,8 @@
+import 'dart:io';
+
+import 'package:device_info_plus/device_info_plus.dart';
+import 'package:device_info_plus_aurora/aurora_device_info.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:marks_counter_flutter/buttons.dart';
 import 'package:marks_counter_flutter/marks_state.dart';
@@ -72,6 +77,42 @@ class MarkButtonsBar extends StatelessWidget {
             ),
           ],
         ),
+      ],
+    );
+  }
+}
+
+class DeviceInfoWidget extends StatefulWidget {
+  @override
+  State<DeviceInfoWidget> createState() => _DeviceInfoWidgetState();
+}
+
+class _DeviceInfoWidgetState extends State<DeviceInfoWidget> {
+  LinuxDeviceInfo? deviceInfo;
+
+  @override
+  void initState() {
+    super.initState();
+
+    Future(() async {
+      final deviceInfoPlugin = DeviceInfoPlugin();
+      final deviceInfo = await deviceInfoPlugin.linuxInfo;
+      setState(() => this.deviceInfo = deviceInfo);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("operatingSystem=${Platform.operatingSystem}"),
+        Text("operatingSystemVersion=${Platform.operatingSystemVersion}"),
+        Text("isAurora=${deviceInfo is AuroraDeviceInfo}"),
+        Text("deviceInfo=$deviceInfo"),
+        Text("deviceInfo?.data=${deviceInfo?.data}"),
+        Text("defaultTargetPlatform=$defaultTargetPlatform"),
+        Text("kIsAurora=$kIsAurora"),
       ],
     );
   }

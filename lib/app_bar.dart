@@ -27,7 +27,7 @@ class MarksAppBar extends StatelessWidget {
             ),
             icon: Icon(
               Icons.info_outline,
-              color: Theme.of(context).accentColor,
+              // todo: check -- color: Theme.of(context).accentColor,
             ),
           ),
           SizedBox(width: 8),

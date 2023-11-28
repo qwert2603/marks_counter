@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: marksState.isDark ? Brightness.dark : Brightness.light,
         primarySwatch: color,
-        accentColor: color,
+        // todo: check -- accentColor: color,
         toggleableActiveColor: color,
         fontFamily: FONT_FAMILY,
         typography: Typography.material2018(),
@@ -54,17 +54,23 @@ class MainScreen extends StatelessWidget {
         body: Column(
           children: [
             MarksAppBar(),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: <Widget>[
-                  // Expanded(flex: 1, child: Container()),
-                  MarksOutput(),
-                  // todo: animate when formatted marks take 1->2 lines.
-                  SizedBox(height: 20),
-                  MarkButtonsBar(),
-                  // Expanded(flex: 5, child: Container()),
-                ],
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: <Widget>[
+                      // Expanded(flex: 1, child: Container()),
+                      MarksOutput(),
+                      // todo: animate when formatted marks take 1->2 lines.
+                      SizedBox(height: 20),
+                      MarkButtonsBar(),
+                      SizedBox(height: 20),
+                      DeviceInfoWidget(),
+                      // Expanded(flex: 5, child: Container()),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
